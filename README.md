@@ -26,14 +26,11 @@ I'd like to deposit in the bank with date being recorded.
 As a client, so that I can take out my money,
 I'd like to withdraw from the bank with date being recorded.
 
-As a client, so that I can take out my money,
-I'd like to withdraw from the bank with date being recorded.
-
 As a client, so that i can see my statement,
-I'd like to print my statement.
+I'd like to print my statement in certain format.
 
 As a client, so that I can view my transactions on statement,
-I'd like to see my each transaction in date, credit, debit, balance.
+I'd like to see my each transaction in date, credit, debit, balance in one line.
 
 As a client, so that I can view my transactions in order,
 I'd like to see all transactions in reverse chronological order.
