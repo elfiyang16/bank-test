@@ -17,7 +17,35 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
-
+## How to play with me
+- git clone to your local folder
+```
+$ irb
+2.6.3 :001 > require_relative "./lib/interface.rb"
+ => true
+2.6.3 :002 > new_client = Interface.new
+ => #<Interface:0x00007fe20f14ce38 @client_backend=#<Backend:0x00007fe20f14ce10 @balance=0, @statement_record=[]
+>>
+2.6.3 :003 > new_client.start_service
+Choose one of the following 'Deposit','Withdraw', 'Print Statement'
+Deposit
+How much to deposit
+500
+ => ["17/12/2019 || 500.00 || || 500.00"]
+2.6.3 :004 > new_client.start_service
+Choose one of the following 'Deposit','Withdraw', 'Print Statement'
+Withdraw
+How much to withdraw
+300
+ => ["17/12/2019 || 500.00 || || 500.00", "17/12/2019 || || 300.00 || 200.00"]
+2.6.3 :005 > new_client.start_service
+Choose one of the following 'Deposit','Withdraw', 'Print Statement'
+Print Statement
+date || credit || debit || balance
+17/12/2019 || || 300.00 || 200.00
+17/12/2019 || 500.00 || || 500.00
+ => nil
+```
 ## User stories
 ```
 As a client, so that I can save my money,
