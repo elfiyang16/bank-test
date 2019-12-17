@@ -12,6 +12,11 @@ class Backend
     @balance += @balance_change
   end
 
+  def withdraw(money, date = DateTime.now)
+    @date = date.strftime("%d/%m/%Y") 
+    @balance_change = money
+    @balance -= @balance_change
+  end
 
 
 
