@@ -15,7 +15,8 @@ class Interface
     when "Withdraw"
       money = gets.chomp.to_f
       @client_backend.withdraw(money, date = DateTime.now)
-  
+    when "Print Statement"
+      puts @client_backend.print_statement
     end
   end
 
