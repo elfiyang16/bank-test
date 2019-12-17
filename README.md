@@ -7,6 +7,7 @@ The code is written in ruby using test-driven approach, and tested in rspec fram
 
 * Test coverage
 `COVERAGE: 100.00% -- 93/93 lines in 4 files`
+run 'rspec` after bundle install
 
 run 'rspec` after bundle install`
 * There's no edge case discussed due to limited information provided
