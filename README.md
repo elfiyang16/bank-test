@@ -1,4 +1,13 @@
 ### Specification
+## Introduction
+The following project is a tech test to simulate an ATM (deposit, withdrawal, printing statement).
+It's a command line game, so you can just play in the terminal.
+
+The code is written in ruby, and tested in rspec framework. I separate the view in the interface.rb and logics in backend.rb.
+
+* Test coverage 
+`COVERAGE: 100.00% -- 93/93 lines in 4 files`
+
 
 ## Requirements
 * You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
@@ -19,6 +28,7 @@ date || credit || debit || balance
 ```
 ## How to play with me
 - git clone to your local folder
+- run `bundle install`
 ```
 $ irb
 2.6.3 :001 > require_relative "./lib/interface.rb"
