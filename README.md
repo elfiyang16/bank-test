@@ -35,9 +35,6 @@ I'd like to see my each transaction in date, credit, debit, balance in one line.
 As a client, so that I can view my transactions in order,
 I'd like to see all transactions in reverse chronological order.
 
-As a client, so that I can view my transactions in order,
-I'd like to see all transactions in reverse chronological order.
-
 As a client, so that I can choose services,
-I'd like to choose among "Deposit, Withdraw, Print Statemenet"
+I'd like to choose among "Deposit, Withdraw, Print Statement"
 ```
