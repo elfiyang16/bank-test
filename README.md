@@ -3,10 +3,11 @@
 The following project is a tech test to simulate an ATM (deposit, withdrawal, printing statement).
 It's a command line game, so you can just play in the terminal.
 
-The code is written in ruby, and tested in rspec framework. I separate the view in the interface.rb and logics in backend.rb.
+The code is written in ruby, and tested in rspec framework. I separate the view in the interface.rb to deal with the standart input and output, and logics in backend.rb to deal with writing into the system backend and reading from it.
 
 * Test coverage 
 `COVERAGE: 100.00% -- 93/93 lines in 4 files`
+run 'rspec` after bundle install
 
 
 ## Requirements
