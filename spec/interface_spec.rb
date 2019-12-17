@@ -14,6 +14,12 @@ describe Interface do
    new_interface.start_service
   end
 
+  it "when chosen 'Withdraw', ask user input withdraw amount" do
+   allow(new_interface).to receive(:gets).and_return("Withdraw\n","200\n")
+   expect(new_interface).to receive(:gets).and_return("Withdraw\n","200\n")
+   new_interface.start_service
+  end
+
 
 
 

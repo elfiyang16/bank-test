@@ -12,7 +12,10 @@ class Interface
     when "Deposit"
       money = gets.chomp.to_f
       @client_backend.deposit(money, date = DateTime.now)
-    
+    when "Withdraw"
+      money = gets.chomp.to_f
+      @client_backend.withdraw(money, date = DateTime.now)
+  
     end
   end
 
