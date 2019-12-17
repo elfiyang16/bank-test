@@ -1,4 +1,4 @@
-require "backend"
+require_relative "./backend"
 
 class Interface
   def initialize(client_backend =  Backend.new)
@@ -10,9 +10,11 @@ class Interface
     choice = gets.chomp
     case choice
     when "Deposit"
+      puts "How much to deposit"
       money = gets.chomp.to_f
       write_to_backend(choice,money)
     when "Withdraw"
+      puts "How much to withdraw"
       money = -(gets.chomp.to_f)
       write_to_backend(choice,money)
     when "Print Statement"
@@ -22,7 +24,7 @@ class Interface
 
   private
   def write_to_backend(choice, money)
-    @client_backend.deposit(money, date = DateTime.now)  
+    @client_backend.deposit(money, date = DateTime.now)
   end
 
   def print_from_backend
