@@ -11,16 +11,22 @@ class Interface
     case choice
     when "Deposit"
       money = gets.chomp.to_f
-      @client_backend.deposit(money, date = DateTime.now)
+      write_to_backend(choice,money)
     when "Withdraw"
-      money = gets.chomp.to_f
-      @client_backend.withdraw(money, date = DateTime.now)
+      money = -(gets.chomp.to_f)
+      write_to_backend(choice,money)
     when "Print Statement"
-      puts @client_backend.print_statement
+      print_from_backend
     end
   end
 
+  private
+  def write_to_backend(choice, money)
+    @client_backend.deposit(money, date = DateTime.now)  
+  end
 
-
+  def print_from_backend
+    puts @client_backend.print_statement
+  end
 
 end
