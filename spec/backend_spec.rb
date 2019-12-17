@@ -4,7 +4,7 @@ describe Backend do
   let(:deposit){500}
   let(:withdraw){300}
   let(:old_date){DateTime.new(2001,2,3)}
-  let(:new_date){DateTime.now}
+  let(:new_date){DateTime.new(2015,2,3)}
 
   it " deposits in the bank with date being recorded" do
     subject.deposit(deposit, date = old_date)
