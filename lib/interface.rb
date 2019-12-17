@@ -7,7 +7,13 @@ class Interface
 
   def start_service
     puts "Choose one of the following 'Deposit','Withdraw', 'Print Statement'"
-    # choice = gets.chomp
+    choice = gets.chomp
+    case choice
+    when "Deposit"
+      money = gets.chomp.to_f
+      @client_backend.deposit(money, date = DateTime.now)
+    
+    end
   end
 
 

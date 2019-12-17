@@ -6,9 +6,6 @@ describe Backend do
   let(:old_date){DateTime.new(2001,2,3)}
   let(:new_date){DateTime.now}
 
-
-  # let(:date1){}
-
   it " deposits in the bank with date being recorded" do
     subject.deposit(deposit, date = old_date)
     expect(subject.balance).to eq 500
