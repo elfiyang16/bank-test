@@ -8,16 +8,19 @@ class Backend
   end
 
   def deposit(money, date = DateTime.now)
-    @date = date #=> "11/06/2017 18:11"
+    @date = date
     @balance_change = money
     @balance += @balance_change
-    @statement_record.push("#{@date.strftime("%d/%m/%Y")} || || #{'%.2f' % @balance_change} || #{'%.2f' % @balance}")
+    current_balance = @balance
+    @statement_record.push("#{@date.strftime("%d/%m/%Y")} || || #{'%.2f' % @balance_change} || #{'%.2f' % current_balance}")
   end
 
   def withdraw(money, date = DateTime.now)
-    @date = date.strftime("%d/%m/%Y")
+    @date = date
     @balance_change = money
     @balance -= @balance_change
+    current_balance = @balance
+    @statement_record.push("#{@date.strftime("%d/%m/%Y")} || #{'%.2f' % @balance_change} || || #{'%.2f' % current_balance}")
   end
 
  def print_statement
