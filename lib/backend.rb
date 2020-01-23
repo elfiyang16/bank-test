@@ -12,6 +12,7 @@ class Backend
     @balance_change = money
     calculate_balance(@balance_change)
     record_transaction(@date, @balance_change, current_balance = @balance)
+    @balance
   end
 
   def withdraw(money, date = DateTime.now)
@@ -19,6 +20,7 @@ class Backend
     @balance_change = -(money)
     calculate_balance(@balance_change)
     record_transaction(@date, @balance_change, current_balance = @balance)
+    @balance
   end
 
  def print_statement

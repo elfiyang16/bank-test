@@ -7,14 +7,12 @@ describe Backend do
   let(:new_date){DateTime.new(2015,2,3)}
 
   it " deposits in the bank with date being recorded" do
-    subject.deposit(deposit, date = old_date)
-    expect(subject.balance).to eq 500
+    expect(subject.deposit(deposit, date = old_date)).to eq 500
     expect(date).to be_an_instance_of(DateTime)
   end
 
   it " withdraws from the bank with date being recorded" do
-    subject.withdraw(withdraw, date = new_date)
-    expect(subject.balance).to eq (-300)
+    expect(subject.withdraw(withdraw, date = new_date)).to eq (-300)
     expect(date).to be_an_instance_of(DateTime)
   end
 
