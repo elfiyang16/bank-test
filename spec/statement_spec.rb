@@ -9,4 +9,8 @@ describe Statement do
   it "can record deposit in certain format" do
     expect(subject.record_deposit(date, deposit, current_balance)).to eq(["03/02/2001 || 500.00 || || 500.00"])
   end
+
+  it "can record withdraw in certain format" do
+    expect(subject.record_withdraw(date, withdraw, current_balance)).to eq(["03/02/2001 || || -300.00 || 500.00"])
+  end
 end
