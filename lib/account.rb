@@ -1,10 +1,10 @@
 require 'date'
+require_relative './statement'
 
 class Account
-  attr_reader :balance
-  def initialize
+  def initialize(client_statement = Statement.new)
     @balance = 0
-    @statement_record = []
+    @client_statement = client_statement
   end
 
   def deposit(money, date = DateTime.now)
@@ -24,24 +24,19 @@ class Account
   end
 
  def print_statement
-   statement_titile = "date || credit || debit || balance\n"
-   statement_end = "\n"
-   statement_records = @statement_record.reverse.join("\n")
-   statement = statement_titile + statement_records+statement_end
-   statement
+   @client_statement.format_statement
  end
 
 private
-def calculate_balance(balance_change)
-  @balance += @balance_change
-end
-
-def record_transaction(date, balance_change, current_balance)
-  if balance_change >= 0
-    @statement_record.push("#{date.strftime("%d/%m/%Y")} || #{'%.2f' % balance_change} || || #{'%.2f' % current_balance}")
-  else
-    @statement_record.push("#{date.strftime("%d/%m/%Y")} || || #{'%.2f' % -(balance_change)} || #{'%.2f' % current_balance}")
+  def calculate_balance(balance_change)
+    @balance += @balance_change
   end
-end
 
+  def record_transaction(date, balance_change, current_balance)
+    if balance_change >= 0
+      @client_statement.record_deposit(date, balance_change, current_balance)
+    else
+      @client_statement.record_withdraw(date, balance_change, current_balance)
+    end
+  end
 end
