@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/haru/Projects/week9/bank-test/spec/backend_spec.rb": [
+      "/Users/haru/Projects/week9/bank-test/spec/account_spec.rb": [
         1,
         null,
         1,
@@ -33,7 +33,7 @@
         null,
         null
       ],
-      "/Users/haru/Projects/week9/bank-test/lib/backend.rb": [
+      "/Users/haru/Projects/week9/bank-test/lib/account.rb": [
         1,
         null,
         1,
@@ -82,7 +82,7 @@
         null,
         null
       ],
-      "/Users/haru/Projects/week9/bank-test/spec/interface_spec.rb": [
+      "/Users/haru/Projects/week9/bank-test/spec/atm_spec.rb": [
         1,
         null,
         1,
@@ -120,7 +120,7 @@
         null,
         null
       ],
-      "/Users/haru/Projects/week9/bank-test/lib/interface.rb": [
+      "/Users/haru/Projects/week9/bank-test/lib/atm.rb": [
         1,
         null,
         1,
@@ -157,6 +157,6 @@
         null
       ]
     },
-    "timestamp": 1579815213
+    "timestamp": 1579815896
   }
 }

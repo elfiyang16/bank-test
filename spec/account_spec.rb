@@ -1,6 +1,6 @@
-require_relative "../lib/backend"
+require_relative "../lib/account"
 
-describe Backend do
+describe Account do
   let(:deposit){500}
   let(:withdraw){300}
   let(:old_date){DateTime.new(2001,2,3)}
