@@ -13,5 +13,11 @@ class Statement
     @statement_record
   end
 
-
+  def format_statement
+    statement_titile = "date || credit || debit || balance\n"
+    statement_end = "\n"
+    statement_records = @statement_record.reverse.join("\n")
+    statement = statement_titile + statement_records+statement_end
+    statement
+  end
 end

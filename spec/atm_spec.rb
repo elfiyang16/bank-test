@@ -21,7 +21,7 @@ describe Atm do
    new_atm.start_service
   end
 
-  xit "when chosen 'Print Statement', print the statement" do
+  it "when chosen 'Print Statement', print the statement" do
    allow(new_atm).to receive(:gets).and_return("Deposit\n","500\n")
    new_atm.start_service
    allow(new_atm).to receive(:gets).and_return("Withdraw\n","200\n")
